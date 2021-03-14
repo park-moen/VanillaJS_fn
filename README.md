@@ -33,9 +33,17 @@ const style = window.Window.getComputedStyle(element, [,pseudoElt])
 
 - pseudoElt(option): 일치시킬 의사요소(pseudo element)를 지정하는 문자열. 보통의 요소들에 대해서는 생략되거나 null이어야 함.
 
-<img src="/Users/parkmoen/Library/Application Support/typora-user-images/image-20210314195401834.png" alt="image-20210314195401834" style="zoom:80%;" />
+```
+<div class="test-div" style="width: 500px"></div>
 
-<img src="/Users/parkmoen/Library/Application Support/typora-user-images/image-20210314195510335.png" alt="image-20210314195510335" style="zoom:40%;" />
+<script>
+	const $testDiv = document.querySelector('.test-div');
 
+	console.log(window.getComputedStyle($testDiv).width);
+</script> 
+```
 
+```
+출력값 => 500px
+```
 
