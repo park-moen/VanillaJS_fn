@@ -1,0 +1,109 @@
+.a11y-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+}
+
+.clearfix::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+.main {
+  width: 500px;
+  height: 332px;
+  position: relative;
+  margin: 50px auto 0;
+}
+
+.slide-container {
+  overflow: hidden;
+  max-width: 100%;
+  margin: 0;
+}
+
+.slide-list {
+  list-style: none;
+  height: 332px;
+  padding: 0;
+  margin: 0;
+}
+
+.slide {
+  float: left;
+  transform: translateX(-500px);
+  /* trasition: all을 사용하면 js에서 추가한 style opacity 또한 animation이 적용되서 화면에 늦게 사라지는 현상이 발생 */
+  transition: transform 0.5s;
+}
+
+.slide > p {
+  margin: 0;
+  font-size: 36px;
+  width: 500px;
+  height: 332px;
+  text-align: center;
+  line-height: 332px;
+}
+
+.slide:nth-child(1) {
+  background-color: tomato;
+}
+.slide:nth-child(2) {
+  background-color: lightblue;
+}
+.slide:nth-child(3) {
+  background-color: lightgreen;
+}
+.slide:nth-child(4) {
+  background-color: lightpink;
+}
+.slide:nth-child(5) {
+  background-color: lightcyan;
+}
+.slide:nth-child(6) {
+  background-color: lightgrey;
+}
+
+.prev,
+.next {
+  padding: 0;
+  margin: 0;
+  padding: 5px 10px;
+  position: absolute;
+  top: 50%;
+  background-color: transparent;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  opacity: 0.4;
+  outline: none;
+  transform: translate3d(0, -50%, 0);
+  border: 1px solid transparent;
+  border-radius: 50%;
+}
+
+.prev {
+  left: -20px;
+}
+
+.next {
+  right: -20px;
+}
+
+.slide-container > button:hover {
+  background-color: #fff;
+  opacity: 0.8;
+}

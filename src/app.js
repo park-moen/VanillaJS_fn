@@ -46,12 +46,13 @@ function prev() {
 function next() {
   if (traslationComplete === true) {
     traslationComplete = false;
-    const outerIndex = index % length;
+    const outerIndex = index % length; // 0 1 2 3 4 0 1 2 3 4
 
-    index++;
+    index++; // 0 1 2 3 4 5 6 7 8 9
 
     for (let i = 0; i < length; i++) {
       const slide = $slides[i];
+
       slide.style.opacity = '1';
       slide.style.transform = `translateX(${currTransl[i] - moveOffset}px)`;
 
@@ -76,9 +77,9 @@ window.addEventListener('DOMContentLoaded', () => {
   $carousel.style.width = `${length * moveOffset}px`;
 
   for (let i = 0; i < length; i++) {
-    currTransl[i] = -moveOffset;
+    currTransl[i] = -moveOffset; // [-500, -500, -500, -500, -500]
 
-    $slides[i].addEventListener('transitionend', transitionCompleted, true);
+    $slides[i].addEventListener('transitionend', transitionCompleted);
   }
 
   $carousel.insertBefore($carousel.children[4], $carousel.children[0]);
