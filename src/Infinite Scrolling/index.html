@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+      }
+
+      html {
+        font-size: 20px;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+          Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      }
+
+      body {
+        margin: 0;
+      }
+
+      .header .title {
+        margin: 0;
+        padding: 25px;
+        color: #999;
+        font-size: 3rem;
+        font-weight: 300;
+        text-align: center;
+      }
+
+      .main {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 1rem;
+        margin: 3rem 3rem;
+        grid-template-rows: auto;
+      }
+
+      .main figure {
+        margin: 0;
+      }
+
+      .main figcaption {
+        font-size: 1rem;
+        font-family: inherit;
+      }
+
+      .main img {
+        width: 100%;
+        height: 250px;
+        object-fit: cover;
+        box-shadow: 0 5px 8px rgba(0, 0, 0, 0.4);
+        border-radius: 5px;
+      }
+
+      .footer {
+        background-color: #aaa;
+        color: #333;
+        font-size: 1rem;
+        font-weight: 300;
+        padding: 1rem 3rem 3rem 3rem;
+        margin-top: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="header">
+      <h1 class="title">Infinite Scrolling</h1>
+    </header>
+    <main class="main"></main>
+    <footer class="footer">
+      <p>The Footer. &copy; parkMoen</p>
+    </footer>
+
+    <script>
+      const $main = document.querySelector('.main');
+      const $footer = document.querySelector('.footer');
+      const $fragment = document.createDocumentFragment();
+
+      const URL = 'https://picsum.photos/v2/list?limit=9';
+
+      function getData() {
+        console.log('JSON Data');
+
+        fetch(URL)
+          .then(response => response.json())
+          .then(data => {
+            data.forEach(item => {
+              const $fig = document.createElement('figure');
+              const $fc = document.createElement('figcaption');
+              const $img = document.createElement('img');
+
+              $img.src = item.download_url;
+              $img.alt = item.author;
+              $fc.textContent = item.author;
+
+              $fig.appendChild($img);
+              $fig.appendChild($fc);
+              $fragment.appendChild($fig);
+            });
+
+            $main.appendChild($fragment);
+          });
+      }
+
+      function handleIntersection(entries) {
+        if (entries[0].isIntersecting) {
+          getData();
+        }
+      }
+
+      document.addEventListener('DOMContentLoaded', () => {
+        const options = {
+          root: null,
+          rootMargins: '0px',
+          threshold: 0.5
+        };
+
+        const observer = new IntersectionObserver(handleIntersection, options);
+
+        observer.observe($footer);
+
+        getData();
+      });
+    </script>
+  </body>
+</html>

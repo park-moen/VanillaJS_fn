@@ -2,7 +2,6 @@
 
 ## Infinite Carousel 구현 중 유용한 event 및 function
 
-
 ### parseInt()
 
 ---
@@ -17,7 +16,6 @@ parseInt(string, 진수설정); // 10진수, 2진수 ...
 parseInt('500px', 10) // 500 반환
 ```
 
-
 ### Window.getComputedStyle()
 
 ---
@@ -30,7 +28,6 @@ const style = window.Window.getComputedStyle(element, [,pseudoElt])
 
 - Element: 속성값을 얻으려하는 Element
 
-
 - pseudoElt(option): 일치시킬 의사요소(pseudo element)를 지정하는 문자열. 보통의 요소들에 대해서는 생략되거나 null이어야 함.
 
 ```
@@ -40,10 +37,15 @@ const style = window.Window.getComputedStyle(element, [,pseudoElt])
 	const $testDiv = document.querySelector('.test-div');
 
 	console.log(window.getComputedStyle($testDiv).width);
-</script> 
+</script>
 ```
 
 ```
 출력값 => 500px
 ```
 
+### transitionend DOM evnet
+
+### requestAnimationFrame()
+
+**Tip translate3D가 gpu 기반으로 translateX,Y 보다 더 좋은 성능을 가지고 있습니다.**
