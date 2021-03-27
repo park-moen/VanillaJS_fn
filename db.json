@@ -1,0 +1,26 @@
+{
+  "product": [
+    {
+      "id": 1,
+      "content": "열라면",
+      "price": 32000,
+      "count": 1,
+      "cart": false
+    },
+    {
+      "id": 2,
+      "content": "팔도비빔면",
+      "price": 14000,
+      "count": 1,
+      "cart": false
+    },
+    {
+      "id": 3,
+      "content": "간짬뽕",
+      "price": 25000,
+      "count": 1,
+      "cart": false
+    }
+  ],
+  "userItem": []
+}

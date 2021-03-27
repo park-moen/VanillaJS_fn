@@ -83,8 +83,6 @@
       const URL = 'https://picsum.photos/v2/list?limit=9';
 
       function getData() {
-        console.log('JSON Data');
-
         fetch(URL)
           .then(response => response.json())
           .then(data => {

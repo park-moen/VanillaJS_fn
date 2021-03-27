@@ -1,0 +1,215 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  margin: 0;
+}
+
+h1 {
+  margin: 0;
+}
+
+ul,
+li {
+  padding: 0;
+  list-style: none;
+}
+
+p {
+  margin: 0;
+}
+
+button {
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 0;
+  background-color: transparent;
+}
+
+input {
+  padding: 0;
+  border: none;
+  outline: none;
+}
+
+.a11y-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+}
+
+.header {
+  font-size: 2rem;
+  padding: 2.5rem 5rem;
+  text-align: center;
+  color: #f8bc0d;
+  box-shadow: 1px 2px 2px -2px #ccc;
+}
+
+.main {
+  width: 80vw;
+  margin: 0 auto;
+}
+
+.list > .item {
+  display: flex;
+  align-items: center;
+  padding: 2rem 5rem;
+  border-bottom: 1px solid rgb(220, 220, 220);
+  transition: all 0.3s;
+}
+
+.list > .item:hover {
+  box-shadow: 2px 2px 3px 2px #ccc;
+}
+
+.image-container {
+  min-width: 20rem;
+  min-height: 10rem;
+  width: 35rem;
+  height: 20rem;
+}
+
+.image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.item-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: #444;
+  margin-left: 8rem;
+}
+
+.price-container {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid rgb(220, 220, 220);
+}
+
+.price-container .price {
+  font-size: 1rem;
+  font-weight: 500;
+  padding-top: 1.5rem;
+  color: #333;
+}
+
+.count-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  border: 1px solid #ccc;
+  font-size: 0.5rem;
+  cursor: pointer;
+  background: #fafafa;
+  margin: 1rem 0;
+  box-shadow: 0 2px 2px 0 #ccc;
+}
+
+.count-container p {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  transform: scale(0.8);
+}
+
+.count-container p > span:nth-child(1) {
+  color: #777;
+  font-weight: 400;
+}
+
+.fa-sort-down::before {
+  font-size: 1.5rem;
+  line-height: 5px;
+}
+
+.purchase-container {
+  display: flex;
+  gap: 1rem;
+  border-top: 1px solid rgb(220, 220, 220);
+  padding-top: 1rem;
+}
+
+.buy-control {
+  display: flex;
+  width: 72px;
+  height: 25px;
+  border: 1px solid #dddfe1;
+  opacity: 0.7;
+}
+
+.buy-control > input[type='text'] {
+  border: none;
+  width: 100%;
+  text-align: center;
+}
+
+.buy-control > button[class$='btn'] {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  font-size: 0;
+  line-height: 0;
+  text-indent: -9999px;
+}
+
+.buy-control > .minus-btn {
+  width: 8px;
+  height: 8px;
+  background: #fff url(https://res.kurly.com/pc/ico/2010/ico_minus.svg)
+    no-repeat 50% 50%;
+  background-image: url(https://res.kurly.com/pc/ico/2010/ico_minus_on.svg);
+  background-size: 30px 30px;
+}
+
+.buy-control > .plus-btn {
+  width: 8px;
+  height: 8px;
+  background: #fff url(https://res.kurly.com/pc/ico/2010/ico_plus.svg) no-repeat
+    50% 50%;
+  background-image: url(https://res.kurly.com/pc/ico/2010/ico_plus_on.svg);
+}
+
+.purchase-container > .cart,
+.purchase-container > .buy {
+  flex-grow: 1;
+  border: 1px solid #f8bc0d;
+  width: 12.8rem;
+  text-align: center;
+  line-height: 2.5rem;
+}
+
+.purchase-container > .buy {
+  background-color: #f8bc0d;
+}
+
+.purchase-container .cart-btn {
+  width: 100%;
+  color: #f8bc0d;
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+
+.purchase-container .buy-btn {
+  width: 100%;
+  color: #fff;
+  font-size: 1.6rem;
+  font-weight: 600;
+}
