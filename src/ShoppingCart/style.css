@@ -56,6 +56,13 @@ input {
   box-shadow: 1px 2px 2px -2px #ccc;
 }
 
+.header .cart-icon {
+  position: absolute;
+  right: 130px;
+  top: 40px;
+  cursor: pointer;
+}
+
 .main {
   width: 80vw;
   margin: 0 auto;
@@ -173,8 +180,7 @@ input {
 .buy-control > .minus-btn {
   width: 8px;
   height: 8px;
-  background: #fff url(https://res.kurly.com/pc/ico/2010/ico_minus.svg)
-    no-repeat 50% 50%;
+  background: #fff url(https://res.kurly.com/pc/ico/2010/ico_minus.svg) no-repeat 50% 50%;
   background-image: url(https://res.kurly.com/pc/ico/2010/ico_minus_on.svg);
   background-size: 30px 30px;
 }
@@ -182,8 +188,7 @@ input {
 .buy-control > .plus-btn {
   width: 8px;
   height: 8px;
-  background: #fff url(https://res.kurly.com/pc/ico/2010/ico_plus.svg) no-repeat
-    50% 50%;
+  background: #fff url(https://res.kurly.com/pc/ico/2010/ico_plus.svg) no-repeat 50% 50%;
   background-image: url(https://res.kurly.com/pc/ico/2010/ico_plus_on.svg);
 }
 
