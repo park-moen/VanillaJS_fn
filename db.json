@@ -3,24 +3,49 @@
     {
       "id": 1,
       "content": "오뚜기 열라면 봉지라면",
+      "image": "https://thumbnail7.coupangcdn.com/thumbnails/remote/492x492ex/image/product/image/vendoritem/2019/01/31/3066896620/19e6513f-0e9c-4cfe-962c-09543de5aad0.jpg",
       "price": 32000,
       "count": 1,
-      "cart": false
+      "cart": false,
+      "checked": false
     },
     {
       "id": 2,
       "content": "팔도비빔면 156g",
+      "image": "https://thumbnail10.coupangcdn.com/thumbnails/remote/492x492ex/image/retail/images/601230714905851-7971d219-3bf1-4bb2-9e3e-e02b41f0dbc9.jpg",
       "price": 14000,
       "count": 1,
-      "cart": false
+      "cart": false,
+      "checked": false
     },
     {
       "id": 3,
       "content": "삼양 볶음 간짬뽕",
+      "image": "https://thumbnail6.coupangcdn.com/thumbnails/remote/492x492ex/image/product/image/vendoritem/2019/01/25/4326788823/8389579e-4f96-4f4e-8c56-2e013dbea673.jpg",
       "price": 25000,
       "count": 1,
-      "cart": false
+      "cart": false,
+      "checked": false
     }
   ],
-  "userItem": []
+  "userItem": [
+    {
+      "id": 1,
+      "content": "오뚜기 열라면 봉지라면",
+      "image": "https://thumbnail7.coupangcdn.com/thumbnails/remote/492x492ex/image/product/image/vendoritem/2019/01/31/3066896620/19e6513f-0e9c-4cfe-962c-09543de5aad0.jpg",
+      "price": 160000,
+      "count": 5,
+      "cart": false,
+      "checked": false
+    },
+    {
+      "id": 2,
+      "content": "팔도비빔면 156g",
+      "image": "https://thumbnail10.coupangcdn.com/thumbnails/remote/492x492ex/image/retail/images/601230714905851-7971d219-3bf1-4bb2-9e3e-e02b41f0dbc9.jpg",
+      "price": 70000,
+      "count": 5,
+      "cart": false,
+      "checked": false
+    }
+  ]
 }

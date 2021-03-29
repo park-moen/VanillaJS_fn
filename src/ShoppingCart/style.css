@@ -63,6 +63,14 @@ input {
   cursor: pointer;
 }
 
+.header .cart-icon:link {
+  color: #f8bc0d;
+}
+
+.header .cart-icon:visited {
+  color: #f8bc0d;
+}
+
 .main {
   width: 80vw;
   margin: 0 auto;

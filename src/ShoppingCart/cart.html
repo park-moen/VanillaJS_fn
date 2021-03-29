@@ -5,8 +5,40 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="./cartStyle.css" />
   </head>
   <body>
-    <h1>하이</h1>
+    <header class="header">
+      <h1 class="title">
+        <i class="fas fa-utensils"></i>
+        Ramen Shop
+      </h1>
+    </header>
+    <main class="main">
+      <h2 class="sub-title">장바구니</h2>
+      <section class="control-container">
+        <button type="button" class="total-select">전체선택 <span></span></button>
+        <button type="button" class="total-delete">전체삭제</button>
+      </section>
+      <section class="list-container">
+        <ul class="lists">
+          <!-- DOM 생성하는 곳 -->
+        </ul>
+      </section>
+      <section class="cost-container">
+        <span>총 주문 금액</span>
+        <span class="total-cost">200,000</span>
+      </section>
+      <div class="move-container">
+        <a href="./index.html" class="move-shop">계속 쇼핑하기</a>
+        <a href="#" class="move-buy">구매하기</a>
+      </div>
+    </main>
+
+    <script src="./cart.js"></script>
   </body>
 </html>

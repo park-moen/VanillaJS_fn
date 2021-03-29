@@ -25,7 +25,7 @@ const fetchProducts = promise => {
     .then(_product => {
       product = _product;
     })
-    // .then(render)
+    .then(render)
     .catch(console.error);
 };
 
@@ -123,26 +123,16 @@ const handlePlusBtn = ({ target }) => {
 };
 
 // 장바구니에 넣는 함수
-const insertItem = async ({ target }) => {
+const insertItem = ({ target }) => {
   const parentId = target.closest('li').id;
 
-  try {
-    await fetch('http://localhost:3000/userItem', {
-      method: 'POST',
-      headers: { 'content-Type': 'application/json' },
-      body: JSON.stringify(product[parentId - 1])
-    });
-  } catch (err) {
-    console.error(err);
-  }
-
-  // request.post('http://localhost:3000/userItem', product[parentId - 1]);
+  request.post('http://localhost:3000/userItem/', product[parentId - 1]);
 };
 
 // 카트 아이콘 클릭 시 장바구지 페이지로 이동
-// $cartIcon.onclick = () => {
-//   window.history.pushState();
-// };
+$cartIcon.onclick = e => {
+  // e.preventDefault();
+};
 
 // DOM이 전부 만들어지면 실행하는 함수
 window.addEventListener('DOMContentLoaded', () => {
