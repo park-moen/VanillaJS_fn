@@ -126,7 +126,7 @@ const handlePlusBtn = ({ target }) => {
 const insertItem = ({ target }) => {
   const parentId = target.closest('li').id;
 
-  request.post('http://localhost:3000/userItem/', product[parentId - 1]);
+  request.post('http://localhost:8001/userItem/', product[parentId - 1]);
 };
 
 // 카트 아이콘 클릭 시 장바구지 페이지로 이동

@@ -68,19 +68,19 @@ const render = () => {
 
     setAttributes($li, {
       id: `id-${item.id}`,
-      class: 'item'
+      class: 'item',
     });
 
     setAttributes($img, {
-      src: item.image,
-      alt: item.content
+      src: item.img,
+      alt: item.content,
     });
 
     setAttributes($input, {
       type: 'text',
       value: item.count,
       class: 'count-state',
-      id: `id-${item.id}`
+      id: `id-${item.id}`,
     });
 
     $h2.textContent = item.content;
@@ -146,8 +146,8 @@ const request = {
       fetch(url, {
         method: 'POST',
         headers: { 'content-Type': 'application/json' },
-        body: JSON.stringify(payload)
-      })
+        body: JSON.stringify(payload),
+      }),
     );
   },
   patch(url, payload) {
@@ -155,17 +155,17 @@ const request = {
       fetch(url, {
         method: 'PATCH',
         headers: { 'content-Type': 'application/json' },
-        body: JSON.stringify(payload)
-      })
+        body: JSON.stringify(payload),
+      }),
     );
   },
   delete(url) {
     return fetchProducts(
       fetch(url, {
-        method: 'DELETE'
-      })
+        method: 'DELETE',
+      }),
     );
-  }
+  },
 };
 
 // 수량 감소 함수
@@ -231,12 +231,17 @@ const handlePlusBtn = ({ target }) => {
 
 // 상품 제거
 const removeItem = ({ target }) => {
-  const parentId = target.closest('li');
+  const parentDomNode = target.closest('li');
+  const parentDomNodeId = parentDomNode.id.slice(-1);
 
-  $lists.removeChild(parentId);
-  carts = carts.filter(item => item.id !== +parentId.id.slice(-1));
+  $lists.removeChild(parentDomNode);
+  carts = carts.filter(item => item.id !== +parentDomNodeId);
 
   getTotalCost();
+
+  request.delete(`http://localhost:8001/userItem/${+parentDomNodeId}`);
+  // request.delete('http://localhost:8001/userItem/1');
+  console.log(carts);
 };
 
 // 모든 상품 제거
@@ -257,13 +262,13 @@ const postCart = e => {
   carts.forEach(item => {
     request.patch(`http://localhost:3000/userItem/${item.id}`, {
       price: item.price,
-      count: item.count
+      count: item.count,
     });
   });
 };
 
 window.addEventListener('load', () => {
-  request.get('http://localhost:3000/userItem');
+  request.get('http://localhost:8001/userItem');
 
   $totalDelete.onclick = allRemoveItems;
 

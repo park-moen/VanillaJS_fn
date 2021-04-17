@@ -20,6 +20,10 @@ module.exports = class userItem extends Sequelize.Model {
           type: Sequelize.INTEGER.UNSIGNED,
           allowNull: false,
         },
+        checked: {
+          type: Sequelize.BOOLEAN,
+          allowNull: false,
+        },
       },
       {
         sequelize,
