@@ -95,6 +95,27 @@ input {
   height: 20rem;
 }
 
+/* 커러셀 스타일 */
+
+.slide-container {
+  min-width: 20rem;
+  min-height: 10rem;
+  width: 35rem;
+  height: 20rem;
+}
+
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.slide-list > li {
+  border: 1px solid black;
+}
+
+/* 케러셀 스타일 */
+
 .image-container img {
   width: 100%;
   height: 100%;

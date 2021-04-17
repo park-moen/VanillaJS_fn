@@ -37,6 +37,24 @@
       "count": 3,
       "cart": false,
       "checked": false
+    },
+    {
+      "id": 3,
+      "content": "삼양 볶음 간짬뽕",
+      "image": "https://thumbnail6.coupangcdn.com/thumbnails/remote/492x492ex/image/product/image/vendoritem/2019/01/25/4326788823/8389579e-4f96-4f4e-8c56-2e013dbea673.jpg",
+      "price": 175000,
+      "count": 7,
+      "cart": false,
+      "checked": false
+    },
+    {
+      "id": 1,
+      "content": "오뚜기 열라면 봉지라면",
+      "image": "https://thumbnail7.coupangcdn.com/thumbnails/remote/492x492ex/image/product/image/vendoritem/2019/01/31/3066896620/19e6513f-0e9c-4cfe-962c-09543de5aad0.jpg",
+      "price": 64000,
+      "count": 2,
+      "cart": false,
+      "checked": false
     }
   ]
 }
