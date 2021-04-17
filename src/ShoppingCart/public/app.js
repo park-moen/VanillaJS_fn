@@ -38,8 +38,8 @@ const request = {
       fetch(url, {
         method: 'POST',
         headers: { 'content-Type': 'application/json' },
-        body: JSON.stringify(payload)
-      })
+        body: JSON.stringify(payload),
+      }),
     );
   },
   patch(url, payload) {
@@ -47,17 +47,17 @@ const request = {
       fetch(url, {
         method: 'PATCH',
         headers: { 'content-Type': 'application/json' },
-        body: JSON.stringify(payload)
-      })
+        body: JSON.stringify(payload),
+      }),
     );
   },
   delete(url) {
     return fetchProducts(
       fetch(url, {
-        method: 'DELETE'
-      })
+        method: 'DELETE',
+      }),
     );
-  }
+  },
 };
 
 // 현재 사용되는 상품을 찾는 함수
@@ -130,13 +130,13 @@ const insertItem = ({ target }) => {
 };
 
 // 카트 아이콘 클릭 시 장바구지 페이지로 이동
-$cartIcon.onclick = e => {
+$cartIcon.onclick = () => {
   // e.preventDefault();
 };
 
 // DOM이 전부 만들어지면 실행하는 함수
 window.addEventListener('DOMContentLoaded', () => {
-  request.get('http://localhost:3000/product');
+  request.get('http://localhost:8001/product');
 
   $minusBtn.forEach(item => {
     item.onclick = handleMinusBtn;
