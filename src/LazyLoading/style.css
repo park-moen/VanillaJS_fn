@@ -1,0 +1,24 @@
+.container {
+  width: 85vw;
+  margin: 0 auto;
+}
+
+* {
+  font-family: sans-serif;
+}
+
+.title {
+  text-align: center;
+  margin: 4rem;
+  font-size: 3.2rem;
+  text-shadow: 3px 3px aqua;
+}
+
+img {
+  border-radius: 10px;
+  display: block;
+  margin: 2rem auto;
+  width: 800px;
+  height: 500px;
+  object-fit: cover;
+}

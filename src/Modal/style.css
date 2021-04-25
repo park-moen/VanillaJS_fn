@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+
+.readable-hidden,
+legend {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+}
+
+h1 {
+  margin: 0;
+}
+
+body {
+  margin: 0;
+}
+
+.main {
+  display: flex;
+  height: 100%;
+  width: 100%;
+}
+
+.image-container {
+  width: 50vw;
+  height: 100vh;
+}
+
+.image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.main-container {
+  width: 50vw;
+  height: 100vh;
+  background-color: #dcdcdc;
+  font-family: 'Playfair Display', serif;
+  font-weight: 400;
+  font-size: 24px;
+}
+
+.title {
+  margin: 105px 70px 55px;
+
+  color: #333;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 12px;
+  margin: 50px 140px;
+  color: #555;
+}
+
+.content .sub-title {
+  font-size: 16px;
+  font-weight: 400;
+  padding-bottom: 10px;
+  border-bottom: 1.5px solid #888;
+  margin: 5px 0;
+  color: #000;
+}
+
+.content p {
+  line-height: 1.5;
+}
+
+.content .modal-btn {
+  background-color: transparent;
+  border: 1px solid #aaa;
+  padding: 10px 15px;
+  margin-top: 5px;
+  transition: color 1s, background-color 1s;
+  width: 150px;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 300;
+  color: #444;
+}
+
+.content .modal-btn:hover {
+  background: #000;
+  color: #fff;
+}
+
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: 200ms ease-in-out;
+  z-index: 10;
+  background-color: white;
+  width: 400px;
+  height: 200px;
+}
+
+.modal.active {
+  transform: translate(-50%, -50%);
+  opacity: 0.9;
+}
+
+.modal-header {
+  position: relative;
+  padding: 20px;
+}
+
+.modal-title {
+  font-size: 20px;
+  text-align: center;
+  margin: 0;
+}
+
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  border: 0;
+  background-color: transparent;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.input-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 10px 30px;
+}
+
+.input-container input {
+  border: 0;
+  border-bottom: 1.5px solid rgba(0, 0, 0, 0.3);
+  margin: 10px 0;
+  padding-bottom: 3px;
+}
+
+#overlay {
+  position: fixed;
+  opacity: 0;
+  transition: 200ms ease-in-out;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.2);
+  pointer-events: none;
+}
+
+#overlay.active {
+  opacity: 1;
+  pointer-events: all;
+}
